@@ -1,0 +1,225 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7f9fb;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background: #16324f;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd54f;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg,#16324f,#1f8a8a);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 35px;
+    background: #f97316;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #ea580c;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 70px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #0d5c91;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    color: #1f8a8a;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+
+.why-us,
+.testimonial,
+.cta {
+    text-align: center;
+}
+
+.testimonial p {
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+   background: #16324f;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+header .container{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:20px;
+}
+
+nav a{
+    display:block;
+    margin:10px 0;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+
+/* Make service page text consistent */
+/* Consistent spacing for service sections */
+section .container h2 {
+    margin-top: 40px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+section .container p {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+}
+/* Center the CTA section properly */
+.cta {
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+}
+section .container h2:first-of-type {
+    margin-top: 0;
+}
+.cta h2 {
+    text-align: center;
+}
+section.cta h2 {
+    text-align: center;
+}
+.call-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.call-box h2,
+.call-box p {
+    text-align: center !important;
+    margin: 0;
+}
+
+.call-box p {
+    margin-top: 10px;
+    max-width: 500px;
+}
