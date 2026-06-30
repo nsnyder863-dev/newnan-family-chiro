@@ -223,3 +223,27 @@ section.cta h2 {
     margin-top: 10px;
     max-width: 500px;
 }
+
+.sticky-call {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f97316;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.sticky-call:hover {
+    background: #ea580c;
+}
+
+@media (min-width: 768px) {
+    .sticky-call {
+        display: none;
+    }
+}
