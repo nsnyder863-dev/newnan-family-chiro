@@ -247,3 +247,15 @@ section.cta h2 {
         display: none;
     }
 }
+.sticky-call {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f97316;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 9999;
+}
