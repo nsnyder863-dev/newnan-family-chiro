@@ -343,7 +343,58 @@ h3 {
   text-transform: uppercase;
   text-decoration: underline;
 }
+.reviews-section {
+  background: var(--cream);
+  padding: 80px 0;
+}
 
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.reviews-content p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.review-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 14px 35px rgba(5, 40, 74, 0.08);
+}
+
+.stars {
+  color: #f7b500;
+  font-size: 1.35rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.review-card p {
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+.review-card strong {
+  color: var(--navy);
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* Insurance */
 
 .insurance {
