@@ -1,3 +1,13 @@
+:root {
+    --primary: #f28c28;
+    --accent: #1f6f8b;
+    --dark: #0f1720;
+    --light: #f6f8fb;
+    --text: #1b1f24;
+    --muted: #6b7280;
+    --highlight: #f7c948;
+}
+
 * {
     margin: 0;
     padding: 0;
