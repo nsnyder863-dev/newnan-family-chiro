@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://nfchiro.netlify.app/sitemap.xml
+Sitemap: https://newnanchiro.com/sitemap.xml
