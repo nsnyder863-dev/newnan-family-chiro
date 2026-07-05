@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Newnan Family Chiropractic | Chiropractor in Newnan, GA</title>
-  <meta name="description" content="Newnan Family Chiropractic provides back pain relief, neck pain care, sciatica treatment, family chiropractic care, and wellness services in Newnan, GA." />
+  <title>Newnan Chiropractor | Newnan Family Chiropractic</title>
+  <meta name="description" content="Trusted chiropractor in Newnan, GA offering back pain relief, neck pain treatment, sciatica care, family chiropractic, personal injury care, and wellness services." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<div class="top-strip">
-  <div class="container top-strip-inner">
+<div class="top-bar">
+  <div class="container top-bar-inner">
     <span>197 Jefferson Parkway, Newnan, GA 30263</span>
     <a href="tel:+17706839105">(770) 683-9105</a>
   </div>
@@ -21,215 +25,278 @@
 
 <header class="site-header">
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Newnan Family Chiropractic Logo">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="Newnan Family Chiropractic logo">
     </a>
 
-    <nav class="nav">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav class="nav" id="navMenu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="new-patients.html">New Patients</a>
+      <a href="book.html">Book Online</a>
       <a href="contact.html">Contact</a>
+      <a href="tel:+17706839105" class="nav-button">Call Now</a>
     </nav>
-
-    <a href="tel:+17706839105" class="header-btn">Call Now</a>
   </div>
 </header>
-<section class="contact-preview">
-  <div class="container contact-preview-grid">
 
-    <div class="contact-card">
-      <p class="eyebrow">Visit Our Office</p>
-      <h2>Convenient chiropractic care in Newnan, GA.</h2>
-      <p>
-        Newnan Family Chiropractic is located on Jefferson Parkway and welcomes new patients, families, personal injury patients, and VA patients.
-      </p>
-
-      <div class="contact-details">
-        <p><strong>Address:</strong><br>197 Jefferson Parkway<br>Newnan, GA 30263</p>
-        <p><strong>Phone:</strong><br><a href="tel:+17706839105">(770) 683-9105</a></p>
-        <p><strong>Hours:</strong><br>Mon/Wed: 9-12 & 3-6<br>Tue/Thu: 2-5:30<br>Fri: 9-12</p>
-      </div>
-
-      <a href="contact.html" class="btn primary">Contact Our Office</a>
-    </div>
-
-    <div class="map-card">
-      <iframe
-        src="https://www.google.com/maps?q=Newnan%20Family%20Chiropractic%20197%20Jefferson%20Parkway%20Newnan%20GA&output=embed"
-        width="100%"
-        height="100%"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
-  </div>
-</section>
 <main>
 
 <section class="hero">
+  <div class="hero-overlay"></div>
+
   <div class="container hero-grid">
-    <div class="hero-text">
-      <p class="eyebrow">Chiropractic Care in Newnan, GA</p>
-      <h1>Move Better. Feel Better. Live Better.</h1>
-      <p>
-        Relief-focused chiropractic care for back pain, neck pain, sciatica, injuries, and family wellness.
+    <div class="hero-content">
+      <p class="eyebrow">Chiropractic Care in Newnan, Georgia</p>
+
+      <h1>Helping Newnan move better, feel better, and live better.</h1>
+
+      <p class="hero-lead">
+        Personalized chiropractic care for back pain, neck pain, sciatica, sports injuries, pregnancy, family wellness, and personal injury cases.
       </p>
 
-      <div class="hero-buttons">
-        <a href="tel:+17706839105" class="btn primary">Call to Schedule</a>
-        <a href="new-patients.html" class="btn secondary">New Patient Info</a>
+      <div class="hero-actions">
+        <a href="book.html" class="btn btn-primary">Book Appointment</a>
+        <a href="tel:+17706839105" class="btn btn-secondary">Call Now</a>
       </div>
 
-      <div class="trust-row">
+      <div class="hero-trust">
         <span>25+ Years Serving Newnan</span>
         <span>VA Patients Welcome</span>
       </div>
     </div>
 
-    <div class="hero-card">
-      <h2>Schedule Your Visit</h2>
-      <p>Call today to request an appointment.</p>
-      <strong>(770) 683-9105</strong>
-      <p>197 Jefferson Parkway<br>Newnan, GA 30263</p>
-      <a href="contact.html" class="btn primary full">Contact Office</a>
-    </div>
+    <aside class="appointment-card">
+      <p class="card-label">Schedule Your Visit</p>
+      <h2>Start feeling better today.</h2>
+
+      <div class="card-row">
+        <span>Phone</span>
+        <a href="tel:+17706839105">(770) 683-9105</a>
+      </div>
+
+      <div class="card-row">
+        <span>Location</span>
+        <p>197 Jefferson Parkway<br>Newnan, GA 30263</p>
+      </div>
+
+      <div class="card-row">
+        <span>Office Hours</span>
+        <p>Mon/Wed: 9-12 & 3-6<br>Tue/Thu: 2-5:30<br>Fri: 9-12</p>
+      </div>
+
+      <a href="book.html" class="btn btn-primary full">Book Online</a>
+    </aside>
   </div>
 </section>
 
-<section class="services-section">
-  <div class="container">
-    <div class="section-title">
-      <p class="eyebrow">Our Services</p>
-      <h2>Care for pain, movement, and everyday life.</h2>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="icon">🦴</div>
-        <h3>Spinal Adjustments</h3>
-        <p>Restore alignment, reduce discomfort, and improve mobility.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">🚶</div>
-        <h3>Sciatica Relief</h3>
-        <p>Personalized care for nerve-related pain into the hip or leg.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">🏃</div>
-        <h3>Sports Injury Care</h3>
-        <p>Support recovery and help you return to activity.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">👨‍👩‍👧</div>
-        <h3>Family Chiropractic</h3>
-        <p>Gentle care for adults, kids, and families.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="why-us">
-  <div class="container why-grid">
+<section class="trust-strip">
+  <div class="container trust-strip-grid">
     <div>
+      <strong>25+</strong>
+      <span>Years Serving Newnan</span>
+    </div>
+    <div>
+      <strong>Most</strong>
+      <span>Major Insurance Accepted</span>
+    </div>
+    <div>
+      <strong>VA</strong>
+      <span>Patients Welcome</span>
+    </div>
+  </div>
+</section>
+
+<section class="section why-section">
+  <div class="container">
+    <div class="section-heading">
       <p class="eyebrow">Why Choose Us</p>
-      <h2>Local chiropractic care with a personal touch.</h2>
+      <h2>Local care with the polish of a modern healthcare practice.</h2>
       <p>
-        For over 25 years, Newnan Family Chiropractic has served the Coweta County community with practical, patient-centered care.
+        Newnan Family Chiropractic combines experience, personal attention, and practical treatment plans designed around how you actually live.
       </p>
     </div>
 
-    <div class="why-list">
-      <div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span>01</span>
         <h3>Experienced Care</h3>
-        <p>Trusted by generations of Newnan families.</p>
-      </div>
-      <div>
-        <h3>Most Insurance Accepted</h3>
-        <p>Including many major plans and VA patients.</p>
-      </div>
-      <div>
-        <h3>Same-Day Walk-Ins</h3>
-        <p>Available when scheduling allows.</p>
-      </div>
-      <div>
-        <h3>Family Friendly</h3>
-        <p>Comfortable care for patients of all ages.</p>
-      </div>
+        <p>Trusted by generations of Newnan and Coweta County families.</p>
+      </article>
+
+      <article class="feature-card">
+        <span>02</span>
+        <h3>Personalized Treatment</h3>
+        <p>Care plans based on your symptoms, goals, and daily routine.</p>
+      </article>
+
+      <article class="feature-card">
+        <span>03</span>
+        <h3>Insurance Friendly</h3>
+        <p>Most major insurance accepted, with VA patients welcome.</p>
+      </article>
+
+      <article class="feature-card">
+        <span>04</span>
+        <h3>Family Focused</h3>
+        <p>Comfortable chiropractic care for adults, kids, and families.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="doctor-highlight">
-  <div class="container doctor-highlight-grid">
-
-    <div class="doctor-photo-card">
-      <img src="images/dr-truong.jpg" alt="Dr. Tuan Truong, Chiropractor in Newnan GA">
+<section class="section doctor-section">
+  <div class="container doctor-grid">
+    <div class="doctor-image">
+      <div class="photo-placeholder">
+        <span>Add photo here</span>
+        <strong>images/dr-truong.jpg</strong>
+      </div>
     </div>
 
     <div class="doctor-content">
       <p class="eyebrow">Meet Your Chiropractor</p>
       <h2>Dr. Tuan Truong, D.C.</h2>
-
       <p>
-        Dr. Truong has served the Newnan community for over 25 years, providing patient-centered chiropractic care focused on pain relief, mobility, and long-term wellness.
+        Dr. Truong has served Newnan patients for decades with a practical, compassionate approach to chiropractic care.
+      </p>
+      <p>
+        His focus is helping patients understand what is going on, reduce pain, improve movement, and feel more confident in their care plan.
       </p>
 
-      <div class="doctor-credentials">
+      <div class="credential-grid">
         <div>
           <strong>25+ Years</strong>
           <span>Serving Newnan</span>
         </div>
-
         <div>
           <strong>Life University</strong>
           <span>Doctor of Chiropractic</span>
         </div>
-
         <div>
           <strong>University of Michigan</strong>
           <span>Undergraduate Education</span>
         </div>
       </div>
 
-      <a href="about.html" class="btn secondary">Learn More About Dr. Truong</a>
+      <a href="about.html" class="btn btn-dark">Learn More</a>
     </div>
-
   </div>
 </section>
 
-<section class="reviews-section">
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Services</p>
+      <h2>Care for pain, mobility, recovery, and wellness.</h2>
+    </div>
+
+    <div class="service-grid">
+      <a href="back-pain-newnan-ga.html" class="service-card">
+        <h3>Back Pain Relief</h3>
+        <p>Care for lower back pain, stiffness, and spinal discomfort.</p>
+      </a>
+
+      <a href="neck-pain-newnan-ga.html" class="service-card">
+        <h3>Neck Pain Care</h3>
+        <p>Support for neck stiffness, soreness, and posture-related tension.</p>
+      </a>
+
+      <a href="sciatica-treatment-newnan.html" class="service-card">
+        <h3>Sciatica Treatment</h3>
+        <p>Care for sciatic-type pain into the hip, buttock, or leg.</p>
+      </a>
+
+      <a href="sports-injury-chiropractor-newnan.html" class="service-card">
+        <h3>Sports Injury Care</h3>
+        <p>Chiropractic care for active patients and movement-related pain.</p>
+      </a>
+
+      <a href="auto-accident-chiropractor-newnan.html" class="service-card">
+        <h3>Auto Accident Care</h3>
+        <p>Support for accident-related neck pain, back pain, and stiffness.</p>
+      </a>
+
+      <a href="pregnancy-chiropractor-newnan.html" class="service-card">
+        <h3>Pregnancy Chiropractic</h3>
+        <p>Supportive care for pregnancy-related back and hip discomfort.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section visit-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">First Visit</p>
+      <h2>What to expect when you visit.</h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <span>1</span>
+        <h3>Schedule</h3>
+        <p>Call or book online to request your appointment.</p>
+      </div>
+
+      <div class="step-card">
+        <span>2</span>
+        <h3>Evaluation</h3>
+        <p>Talk through your symptoms, history, and goals with the office.</p>
+      </div>
+
+      <div class="step-card">
+        <span>3</span>
+        <h3>Care Plan</h3>
+        <p>Receive personalized recommendations based on your needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-cta">
+  <div class="container booking-cta-inner">
+    <div>
+      <p class="eyebrow">Book Online</p>
+      <h2>Ready to schedule your appointment?</h2>
+      <p>
+        Use our online scheduler to request an appointment. If you need help, call the office directly.
+      </p>
+    </div>
+
+    <a href="book.html" class="btn btn-light">Book Appointment</a>
+  </div>
+</section>
+
+<section class="section reviews-section">
   <div class="container reviews-grid">
     <div>
-      <p class="eyebrow">Patient Reviews</p>
-      <h2>Trusted by Newnan patients.</h2>
+      <p class="eyebrow">Google Reviews</p>
+      <h2>Trusted by local patients.</h2>
       <p>
-        Read what local patients are saying about Newnan Family Chiropractic on Google.
+        Newnan Family Chiropractic is proud to serve patients throughout Newnan and Coweta County.
       </p>
-      <a href="https://www.google.com/search?q=Newnan+Family+Chiropractic+reviews" target="_blank" class="btn primary">
-        Read Google Reviews
-      </a>
+      <a href="https://www.google.com/search?q=Newnan+Family+Chiropractic+reviews" target="_blank" class="btn btn-dark">Read Google Reviews</a>
     </div>
 
     <div class="review-card">
       <div class="stars">★★★★★</div>
-      <p>“They truly care about their patients and I’m always relieved when I leave.”</p>
+      <p>
+        “They truly care about their patients and I’m always relieved when I leave. Highly recommend for any chiropractic needs.”
+      </p>
       <strong>— Google Review</strong>
     </div>
   </div>
 </section>
 
-<section class="insurance">
+<section class="insurance-section">
   <div class="container">
-    <h2>Most Major Insurance Accepted</h2>
+    <p class="eyebrow">Insurance</p>
+    <h2>Most major insurance accepted.</h2>
+
     <div class="insurance-row">
       <span>Aetna</span>
       <span>BlueCross BlueShield</span>
@@ -241,45 +308,54 @@
   </div>
 </section>
 
-<section class="faq">
+<section class="section faq-section">
   <div class="container">
-    <div class="section-title">
-      <p class="eyebrow">FAQ</p>
-      <h2>Common Questions</h2>
+    <div class="section-heading">
+      <p class="eyebrow">Questions</p>
+      <h2>Frequently asked questions.</h2>
     </div>
 
-    <div class="faq-grid">
-      <div>
-        <h3>Do I need a referral?</h3>
-        <p>No referral is required to schedule chiropractic care.</p>
-      </div>
+    <div class="faq-list">
+      <details>
+        <summary>Do I need a referral?</summary>
+        <p>No. In Georgia, patients do not need a referral to schedule chiropractic care.</p>
+      </details>
 
-      <div>
-        <h3>Do you accept insurance?</h3>
-        <p>Most major insurance plans are accepted. Call the office to verify coverage.</p>
-      </div>
+      <details>
+        <summary>Do you accept insurance?</summary>
+        <p>Most major insurance plans are accepted. Call the office to verify your benefits before your visit.</p>
+      </details>
 
-      <div>
-        <h3>Do you accept VA patients?</h3>
+      <details>
+        <summary>Do you accept VA patients?</summary>
         <p>Yes, VA patients are welcome.</p>
-      </div>
+      </details>
 
-      <div>
-        <h3>Do you take personal injury cases?</h3>
+      <details>
+        <summary>Do you take personal injury cases?</summary>
         <p>Yes, personal injury patients are welcome.</p>
-      </div>
+      </details>
     </div>
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container cta-box">
-    <div>
-      <p class="eyebrow">Ready to Schedule?</p>
-      <h2>Call Newnan Family Chiropractic today.</h2>
-      <p>Take the first step toward feeling better.</p>
+<section class="contact-preview">
+  <div class="container contact-grid">
+    <div class="contact-card">
+      <p class="eyebrow">Visit Our Office</p>
+      <h2>Convenient chiropractic care in Newnan, GA.</h2>
+      <p>197 Jefferson Parkway<br>Newnan, GA 30263</p>
+      <p><a href="tel:+17706839105">(770) 683-9105</a></p>
+      <a href="contact.html" class="btn btn-primary">Contact Office</a>
     </div>
-    <a href="tel:+17706839105" class="btn light">Call (770) 683-9105</a>
+
+    <div class="map-card">
+      <iframe
+        src="https://www.google.com/maps?q=Newnan%20Family%20Chiropractic%20197%20Jefferson%20Parkway%20Newnan%20GA&output=embed"
+        loading="lazy"
+        allowfullscreen="">
+      </iframe>
+    </div>
   </div>
 </section>
 
@@ -288,7 +364,8 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <img src="images/logo.png" alt="Newnan Family Chiropractic Logo" class="footer-logo">
+      <img src="images/logo.png" alt="Newnan Family Chiropractic logo" class="footer-logo">
+      <p>Family chiropractic care serving Newnan and Coweta County for over 25 years.</p>
     </div>
 
     <div>
@@ -298,10 +375,11 @@
     </div>
 
     <div>
-      <h4>Quick Links</h4>
+      <h4>Pages</h4>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="new-patients.html">New Patients</a>
+      <a href="book.html">Book Online</a>
       <a href="contact.html">Contact</a>
     </div>
 
@@ -315,10 +393,14 @@
     </div>
   </div>
 
-  <p class="copyright">© 2026 Newnan Family Chiropractic. All Rights Reserved.</p>
+  <div class="container footer-bottom">
+    <p>© 2026 Newnan Family Chiropractic. All Rights Reserved.</p>
+  </div>
 </footer>
 
-<a href="tel:+17706839105" class="sticky-call">Call Now</a>
+<a href="book.html" class="floating-book">Book Online</a>
+<a href="tel:+17706839105" class="mobile-call">Call Now</a>
 
+<script src="script.js"></script>
 </body>
 </html>
