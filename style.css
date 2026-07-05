@@ -1190,3 +1190,29 @@ min-height:380px;
 }
 
 }
+.contact-form{
+display:grid;
+gap:14px;
+}
+
+.contact-form label{
+font-weight:800;
+color:var(--navy);
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:16px 18px;
+border:1px solid rgba(0,0,0,.12);
+border-radius:14px;
+font-family:inherit;
+font-size:1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline:none;
+border-color:var(--copper);
+box-shadow:0 0 0 4px rgba(201,120,42,.12);
+}
