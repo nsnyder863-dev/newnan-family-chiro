@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">Newnan Family Chiropractic logo</title>
+<desc id="desc">Premium NF monogram with gold spinal column and Newnan Family Chiropractic wordmark.</desc>
+<defs>
+  <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#F1D38A"/>
+    <stop offset="0.46" stop-color="#C89A45"/>
+    <stop offset="1" stop-color="#8B5E1E"/>
+  </linearGradient>
+  <linearGradient id="ink" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#29313D"/>
+    <stop offset="1" stop-color="#0B1F3A"/>
+  </linearGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#0B1F3A" flood-opacity=".12"/>
+  </filter>
+</defs>
+<rect width="1200" height="320" rx="0" fill="transparent"/>
+<g transform="translate(36 34)" filter="url(#soft)">
+  <rect x="0" y="0" width="252" height="252" rx="46" fill="#0B1F3A"/>
+  <rect x="14" y="14" width="224" height="224" rx="36" fill="none" stroke="url(#gold)" stroke-width="4" opacity=".95"/>
+  <text x="47" y="164" font-family="Playfair Display, Georgia, serif" font-size="132" font-weight="800" fill="#FAF8F4" letter-spacing="-8">N</text>
+  <text x="126" y="164" font-family="Playfair Display, Georgia, serif" font-size="132" font-weight="800" fill="#FAF8F4" letter-spacing="-8">F</text>
+  <path d="M140 54 C101 74 183 96 139 119 C103 139 185 162 139 189" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
+  <g fill="url(#gold)">
+    <ellipse cx="140" cy="54" rx="7" ry="5"/><ellipse cx="148" cy="74" rx="6" ry="4"/>
+    <ellipse cx="151" cy="96" rx="6" ry="4"/><ellipse cx="139" cy="119" rx="6" ry="4"/>
+    <ellipse cx="148" cy="141" rx="6" ry="4"/><ellipse cx="151" cy="164" rx="6" ry="4"/>
+    <ellipse cx="139" cy="189" rx="7" ry="5"/>
+  </g>
+</g>
+<g transform="translate(330 70)">
+  <text x="0" y="60" font-family="Playfair Display, Georgia, serif" font-size="64" font-weight="800" fill="#1F2328" letter-spacing="2">NEWNAN FAMILY</text>
+  <text x="2" y="122" font-family="Playfair Display, Georgia, serif" font-size="48" font-weight="800" fill="#1F2328" letter-spacing="8">CHIROPRACTIC</text>
+  <line x1="3" y1="145" x2="690" y2="145" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+  <text x="3" y="198" font-family="Segoe Script, Brush Script MT, cursive" font-size="40" fill="url(#gold)">Dr. Tuan Truong, D.C.</text>
+</g>
+</svg>
