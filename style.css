@@ -88,183 +88,46 @@
 @media(max-width:640px){.page-hero-content{padding:70px 0 86px}.form-two-col,.verification-grid,.evaluation-grid{grid-template-columns:1fr}.review-actions{flex-direction:column}.review-actions .btn{width:100%}.doctor-identity-card{min-height:430px;padding:24px}.safety-notice{padding:48px 0}}
 
 
-/* Existing logo asset system — no cropping, conversion, or regeneration */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  flex: 0 0 auto;
+/* FINAL ASSET PLACEMENT — existing logo files only */
+.brand{display:inline-flex;align-items:center;flex:0 0 auto;width:clamp(230px,24vw,320px);min-width:0}
+.brand img{display:block;width:100%;height:auto;max-height:78px;object-fit:contain;object-position:left center}
+.footer-logo{display:block;width:min(320px,100%);height:auto;object-fit:contain;background:transparent;margin-bottom:18px}
+.hero-card .hero-logo{display:block;width:min(430px,100%);height:auto;max-height:150px;object-fit:contain;margin:0 auto 18px;background:transparent;padding:0;border-radius:0}
+.contact-card-logo{display:block;width:min(300px,100%);height:auto;max-height:105px;object-fit:contain;margin:0 auto 24px}
+
+/* Contact page only */
+.contact-hero{min-height:680px;display:flex;align-items:center}
+.contact-hero .hero-grid{width:min(1180px,92%);margin-inline:auto;padding:86px 0 94px}
+.contact-hero .hero-content{max-width:680px}
+.contact-hero .appointment-card{background:rgba(255,253,248,.98);border:1px solid rgba(255,255,255,.45);border-radius:28px;padding:34px;box-shadow:var(--shadow)}
+.contact-hero .appointment-card h3,.contact-hero .appointment-card a,.contact-hero .appointment-card .card-item span{color:var(--navy)}
+.contact-hero .appointment-card p{color:var(--muted)}
+
+/* New Patients page only */
+.new-patient-hero{min-height:540px;display:flex;align-items:center}
+.new-patient-hero>.container{width:min(1180px,92%);padding:82px 0 92px}
+.new-patient-hero .hero-content{max-width:760px}
+
+@media(max-width:1100px){
+ .brand{width:240px}
+ .nav{gap:12px;font-size:.88rem}
 }
-
-.brand-picture {
-  display: block;
-  width: 300px;
-  line-height: 0;
+@media(max-width:980px){
+ .brand{width:225px;max-width:calc(100% - 64px)}
+ .contact-hero{min-height:auto}
+ .contact-hero .hero-grid{grid-template-columns:1fr;gap:34px;padding:62px 0 72px}
+ .new-patient-hero{min-height:460px}
+ .new-patient-hero>.container{padding:68px 0 78px}
 }
-
-.brand-picture img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 78px;
-  object-fit: contain;
-  object-position: left center;
-}
-
-.footer-logo {
-  display: block;
-  width: min(320px, 100%);
-  height: auto;
-  object-fit: contain;
-  background: transparent;
-}
-
-.hero-card .hero-logo {
-  display: block;
-  width: min(520px, 90%);
-  height: auto;
-  margin: 0 auto 24px;
-  object-fit: contain;
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px;
-}
-
-.appointment-card img[src$="logo.svg"],
-.doctor-identity-card img[src$="logo.svg"],
-.scheduler-placeholder img[src$="logo.svg"] {
-  display: block;
-  width: min(320px, 100%);
-  height: auto;
-  margin: 0 auto 24px;
-  object-fit: contain;
-  background: transparent;
-}
-
-@media (max-width: 1100px) {
-  .brand-picture {
-    width: 250px;
-  }
-
-  .nav {
-    gap: 14px;
-  }
-}
-
-@media (max-width: 980px) {
-  .brand-picture {
-    width: 225px;
-  }
-}
-
-@media (max-width: 640px) {
-  .brand-picture {
-    width: 52px;
-    height: 52px;
-  }
-
-  .brand-picture img {
-    width: 52px;
-    height: 52px;
-    max-height: none;
-  }
-
-  .hero-card .hero-logo {
-    width: min(320px, 88%);
-    padding: 14px;
-  }
-}
-
-
-/* Contact page repair only */
-.contact-hero {
-  min-height: 680px;
-  display: flex;
-  align-items: center;
-}
-
-.contact-hero .hero-grid {
-  width: min(1180px, 92%);
-  margin-inline: auto;
-  padding: 88px 0 96px;
-}
-
-.contact-hero .hero-content {
-  max-width: 680px;
-}
-
-.contact-hero .appointment-card {
-  background: rgba(255, 253, 248, 0.98);
-  border: 1px solid rgba(255,255,255,.45);
-  border-radius: 28px;
-  padding: 34px;
-  box-shadow: var(--shadow);
-}
-
-.contact-hero .appointment-card h3,
-.contact-hero .appointment-card a,
-.contact-hero .appointment-card .card-item span {
-  color: var(--navy);
-}
-
-.contact-hero .appointment-card p {
-  color: var(--muted);
-}
-
-.contact-card-logo {
-  display: block;
-  width: min(300px, 100%);
-  height: auto;
-  margin: 0 auto 26px;
-  object-fit: contain;
-}
-
-@media (max-width: 980px) {
-  .contact-hero {
-    min-height: auto;
-  }
-
-  .contact-hero .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 34px;
-    padding: 64px 0 74px;
-  }
-
-  .contact-hero .hero-content {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-  .contact-hero .hero-grid {
-    padding: 46px 0 58px;
-    gap: 28px;
-  }
-
-  .contact-hero h1 {
-    font-size: clamp(2.7rem, 12vw, 3.5rem);
-    line-height: 1;
-  }
-
-  .contact-hero .hero-text {
-    font-size: 1.05rem;
-    line-height: 1.65;
-  }
-
-  .contact-hero .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .contact-hero .hero-actions .btn {
-    width: 100%;
-  }
-
-  .contact-hero .appointment-card {
-    padding: 26px 22px;
-    border-radius: 22px;
-  }
-
-  .contact-card-logo {
-    width: min(250px, 100%);
-  }
+@media(max-width:640px){
+ .brand{width:210px;max-width:calc(100% - 58px)}
+ .brand img{max-height:60px}
+ .hero-card{display:none}
+ .premium-hero h1{font-size:clamp(2.65rem,11vw,3.45rem);line-height:1}
+ .contact-hero .hero-grid{padding:46px 0 58px;gap:28px}
+ .contact-hero .hero-actions{display:grid;grid-template-columns:1fr}
+ .contact-hero .hero-actions .btn{width:100%}
+ .contact-hero .appointment-card{padding:26px 22px;border-radius:22px}
+ .new-patient-hero{min-height:410px}
+ .new-patient-hero>.container{padding:54px 0 64px}
 }
