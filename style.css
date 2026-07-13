@@ -88,38 +88,59 @@
 @media(max-width:640px){.page-hero-content{padding:70px 0 86px}.form-two-col,.verification-grid,.evaluation-grid{grid-template-columns:1fr}.review-actions{flex-direction:column}.review-actions .btn{width:100%}.doctor-identity-card{min-height:430px;padding:24px}.safety-notice{padding:48px 0}}
 
 
-/* Approved logo placement */
+/* SAFE LOGO REPAIR — approved source artwork remains unedited */
 .brand {
   display: inline-flex;
   align-items: center;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
 }
+
 .brand img {
-  width: clamp(225px, 22vw, 315px);
-  max-height: 78px;
+  display: block;
+  width: 250px;
+  max-width: 30vw;
+  height: auto;
+  max-height: 72px;
   object-fit: contain;
   object-position: left center;
 }
+
 .footer-logo {
-  width: min(300px, 100%);
+  display: block;
+  width: 285px;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,.18));
+  object-position: left center;
+  background: #fff;
+  border-radius: 8px;
 }
-.hero-logo {
-  width: min(100%, 560px);
+
+.doctor-identity-card img {
+  width: min(260px, 100%);
   height: auto;
-  margin-inline: auto;
-  border-radius: 18px;
-}
-.doctor-identity-card img,
-.scheduler-placeholder img {
-  background: transparent;
   object-fit: contain;
+  background: #fff;
+  border-radius: 14px;
 }
+
 @media (max-width: 980px) {
-  .brand img { width: 235px; max-height: 70px; }
+  .brand img {
+    width: 220px;
+    max-width: 48vw;
+    max-height: 66px;
+  }
 }
+
 @media (max-width: 640px) {
-  .brand img { width: 205px; max-height: 62px; }
+  .brand img {
+    width: 190px;
+    max-width: 58vw;
+    max-height: 58px;
+  }
+
+  .footer-logo {
+    width: 245px;
+  }
 }
