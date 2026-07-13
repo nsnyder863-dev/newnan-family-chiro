@@ -18,3 +18,9 @@ The appointment form sends only basic scheduling information through the same Fo
 - Add verified review excerpts only after confirming permission and exact wording.
 - Complete unique-content expansion for the remaining individual service pages.
 - Validate the live deployment with Lighthouse, WAVE, GA4 DebugView, Search Console, and real mobile devices.
+
+## Header repair
+- Rebuilt the New Patients and Contact page headers using the clean approved horizontal SVG logo.
+- Removed oversized raster-logo dimensions that distorted the header.
+- Added a stable desktop/tablet/mobile header layout and earlier spacing protection.
+- Corrected logo rendering inside the Contact page information card.
