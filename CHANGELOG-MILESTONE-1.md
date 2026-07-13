@@ -18,3 +18,10 @@ The appointment form sends only basic scheduling information through the same Fo
 - Add verified review excerpts only after confirming permission and exact wording.
 - Complete unique-content expansion for the remaining individual service pages.
 - Validate the live deployment with Lighthouse, WAVE, GA4 DebugView, Search Console, and real mobile devices.
+
+## Logo correction pass
+- Replaced oversized full advertising artwork in headers and footers with a clean approved horizontal logo.
+- Removed white image boxes by creating transparent approved-brand PNG assets.
+- Replaced square logo usage with a transparent approved monogram/signature version.
+- Standardized logo sizing on desktop, tablet, and mobile.
+- Preserved the full approved logo for Open Graph and structured-data images.
