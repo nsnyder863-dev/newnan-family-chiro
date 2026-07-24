@@ -22,7 +22,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css?v=20260724-2">
+<link rel="stylesheet" href="style.css?v=20260724-headshot-corrected">
 
 
   <style>
@@ -39,6 +39,28 @@
     .page-about .section h3,
     .page-about .section h4 { color:#071d33 !important; }
     .page-about .feature-card { background:#fff !important; }
+
+    /* About portrait: show the complete photo without zooming or forced cropping. */
+    .about-portrait-wrap {
+      width:100%;
+      max-width:460px;
+      margin-inline:auto;
+    }
+    .about-portrait-image {
+      display:block;
+      width:100%;
+      height:auto !important;
+      max-height:none !important;
+      aspect-ratio:auto !important;
+      object-fit:contain !important;
+      object-position:center !important;
+      transform:none !important;
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+    @media (max-width:640px) {
+      .about-portrait-wrap { max-width:330px; }
+    }
   </style>
 </head>
 
@@ -103,13 +125,13 @@ Committed to providing personalized chiropractic care that helps patients reduce
 
 <div class="container doctor-grid">
 
-<div>
+<div class="about-portrait-wrap">
 
-<img src="images/dr-tuan-truong-headshot.jpg"
+<img src="images/dr-tuan-truong-about-v3.jpg?v=20260724-about-v3"
 alt="Dr. Tuan Truong, chiropractor at Newnan Family Chiropractic"
-class="doctor-headshot about-headshot"
-width="1200" height="1800"
-loading="eager" decoding="async">
+width="960" height="1280"
+loading="eager" decoding="async"
+class="about-portrait-image">
 
 </div>
 
