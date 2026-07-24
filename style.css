@@ -37,3 +37,38 @@
     border-radius: 12px;
   }
 }
+
+/* Contrast repair: interior-page hero sections use light text and therefore require a dark surface. */
+.hero:not(.premium-hero){
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  isolation:isolate;
+  background:radial-gradient(circle at 82% 18%,rgba(229,181,93,.20),transparent 30%),linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 52%,var(--navy-3) 100%);
+}
+.hero:not(.premium-hero)::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:72px 72px;
+}
+.hero:not(.premium-hero)>.container{padding-top:72px;padding-bottom:72px}
+.hero:not(.premium-hero) h1,
+.hero:not(.premium-hero) h2,
+.hero:not(.premium-hero) h3,
+.hero:not(.premium-hero) h4{color:#fff}
+.hero:not(.premium-hero) p:not(.hero-badge){color:rgba(255,255,255,.86)}
+.hero:not(.premium-hero) .hero-badge{color:#fff}
+
+/* Keep headings readable whenever a light section follows a dark section. */
+.section,
+.section[style*="background:white"],
+.section[style*="background: white"]{color:var(--text)}
+.section h1,.section h2,.section h3,.section h4{color:var(--navy)}
+
+@media(max-width:640px){
+  .hero:not(.premium-hero)>.container{padding-top:54px;padding-bottom:54px}
+}
