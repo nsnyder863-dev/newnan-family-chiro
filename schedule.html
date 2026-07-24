@@ -54,30 +54,32 @@
       </div>
     </div>
     <div class="booking-widget">
-      <p class="eyebrow">Scheduler</p>
-      <h2>Secure scheduler placeholder</h2>
+      <p class="eyebrow">Appointment Request</p>
+      <h2>Request a visit online.</h2>
       <div class="scheduler-placeholder">
         <img src="images/logo-square.png" alt="Newnan Family Chiropractic mark">
-        <h3>Online scheduling embed goes here</h3>
-        <p>Replace this box with the approved scheduling widget code once the HIPAA/BAA settings are confirmed.</p>
-        <a href="tel:+17706839105" class="btn btn-primary" style="margin-top:16px">Call to Schedule Now</a>
+        <h3>Prefer to speak with the office?</h3>
+        <p>Call during office hours for immediate scheduling assistance. Online requests are reviewed by the office and are not confirmed until a staff member contacts you.</p>
+        <a href="tel:+17706839105" class="btn btn-primary" style="margin-top:16px">Call (770) 683-9105</a>
       </div>
     </div>
   </div>
 </section>
 <section class="section" style="padding-top:0">
   <div class="container form-card">
-    <p class="eyebrow">Temporary Request Form Layout</p>
-    <h2>Appointment request fields</h2>
-    <p>This is a front-end layout only. It will not submit until connected to a secure, approved service.</p>
-    <form>
-      <div class="form-row"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"></div>
-      <div class="form-row"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="Best phone number"></div>
-      <div class="form-row"><label for="email">Email</label><input id="email" type="email" placeholder="Email address"></div>
-      <div class="form-row"><label for="patient">Patient type</label><select id="patient"><option>New patient</option><option>Existing patient</option></select></div>
-      <div class="form-row"><label for="time">Preferred day/time</label><input id="time" type="text" placeholder="Example: Wednesday afternoon"></div>
-      <div class="form-row"><label for="note">Brief note, optional</label><textarea id="note" placeholder="Keep this brief. Do not include sensitive medical details here."></textarea></div>
-      <button type="button" class="btn btn-dark">Form Disabled Until Secure Connection</button>
+    <p class="eyebrow">Online Request Form</p>
+    <h2>Request an appointment</h2>
+    <p>Submit basic contact and scheduling information only. The office will contact you to confirm availability.</p>
+    <form action="https://formspree.io/f/xojorllz" method="POST">
+      <div class="form-row"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required></div>
+      <div class="form-row"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Best phone number" required></div>
+      <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="Email address" required></div>
+      <div class="form-row"><label for="patient">Patient type</label><select id="patient" name="patient_type" required><option value="">Select one</option><option>New patient</option><option>Existing patient</option></select></div>
+      <div class="form-row"><label for="time">Preferred day/time</label><input id="time" name="preferred_time" type="text" placeholder="Example: Wednesday afternoon" required></div>
+      <div class="form-row"><label for="note">Brief note, optional</label><textarea id="note" name="message" placeholder="Keep this brief. Do not include sensitive medical details here."></textarea></div>
+      <input type="hidden" name="_subject" value="Website Appointment Request - Newnan Family Chiropractic">
+      <input type="hidden" name="request_type" value="Appointment request">
+      <button type="submit" class="btn btn-dark">Submit Appointment Request</button>
     </form>
   </div>
 </section>
