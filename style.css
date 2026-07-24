@@ -72,3 +72,28 @@
 @media(max-width:640px){
   .hero:not(.premium-hero)>.container{padding-top:54px;padding-bottom:54px}
 }
+
+/* Exact contrast fixes for Contact, About, and New Patients pages. */
+.page-contact .appointment-card{background:#fff;color:var(--text);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+.page-contact .appointment-card h1,.page-contact .appointment-card h2,.page-contact .appointment-card h3,.page-contact .appointment-card h4{color:var(--navy)!important}
+.page-contact .appointment-card p,.page-contact .appointment-card span{color:var(--muted)!important}
+.page-contact .contact-premium h1,.page-contact .contact-premium h2,.page-contact .contact-premium h3,.page-contact .contact-premium h4,
+.page-about .section h1,.page-about .section h2,.page-about .section h3,.page-about .section h4,
+.page-new-patients .section h1,.page-new-patients .section h2,.page-new-patients .section h3,.page-new-patients .section h4{color:var(--navy)!important}
+
+/* Dr. Truong headshot: shared presentation for homepage and About page. */
+.doctor-headshot{
+  width:100%;
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+  object-position:center 24%;
+  border-radius:26px;
+  display:block;
+}
+.about-headshot{
+  border-radius:30px;
+  box-shadow:var(--shadow);
+}
+@media(max-width:640px){
+  .doctor-headshot{aspect-ratio:3 / 4;object-position:center 20%}
+}

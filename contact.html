@@ -11,10 +11,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260724-2">
+
+  <style>
+    /* Page-scoped contrast safeguards */
+    .page-contact .contact-hero {
+      background: radial-gradient(circle at 82% 18%, rgba(229,181,93,.20), transparent 30%), linear-gradient(135deg,#071d33 0%,#0f2d4a 52%,#14395c 100%) !important;
+    }
+    .page-contact .contact-hero .hero-content h1,
+    .page-contact .contact-hero .hero-content h2,
+    .page-contact .contact-hero .hero-content p { color:#fff !important; }
+    .page-contact .appointment-card {
+      background:#fff !important;
+      color:#223043 !important;
+      border-radius:24px;
+      padding:30px;
+      box-shadow:0 24px 70px rgba(7,29,51,.18);
+    }
+    .page-contact .appointment-card h1,
+    .page-contact .appointment-card h2,
+    .page-contact .appointment-card h3,
+    .page-contact .appointment-card h4,
+    .page-contact .contact-premium h1,
+    .page-contact .contact-premium h2,
+    .page-contact .contact-premium h3,
+    .page-contact .contact-premium h4 { color:#071d33 !important; }
+    .page-contact .appointment-card p,
+    .page-contact .appointment-card span { color:#637083 !important; }
+    .page-contact .contact-premium { background:#fbf8f1 !important; }
+    .page-contact .premium-panel { background:#fff !important; }
+  </style>
 </head>
 
-<body>
+<body class="page-contact">
 
 <div class="top-bar">
   <div class="container top-bar-inner">
