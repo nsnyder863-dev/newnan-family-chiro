@@ -11,81 +11,124 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Schedule Online | Newnan Family Chiropractic</title>
+  <title>Request an Appointment | Newnan Family Chiropractic</title>
   <meta name="description" content="Request an appointment online with Newnan Family Chiropractic in Newnan, GA, or call the office at (770) 683-9105." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+<style>
+.page-schedule .appointment-intro{padding:46px 0 26px}
+.page-schedule .appointment-intro h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:16px}
+.page-schedule .appointment-intro p{max-width:700px}
+.appointment-jump{display:block;width:fit-content;color:var(--navy);font-weight:800;text-decoration:underline;text-underline-offset:4px;margin-top:16px}
+.appointment-section{padding:8px 0 64px}
+.appointment-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
+.page-schedule .form-card{min-width:0;padding:clamp(20px,3vw,36px)}
+.page-schedule .form-card h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:16px}
+.page-schedule .form-card p{margin-bottom:20px}
+.page-schedule form{margin-top:24px}
+.appointment-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.page-schedule input,.page-schedule select,.page-schedule textarea{min-width:0;color:var(--text);font-size:16px;border-color:#9aa4ae}
+.page-schedule label span{font-weight:400}
+.page-schedule .appointment-privacy,.page-schedule .appointment-confirmation{font-size:.9rem}
+.page-schedule .appointment-confirmation{margin:14px 0 0}
+.page-schedule .btn{cursor:pointer;font:inherit;font-weight:800;white-space:normal;text-align:center}
+.appointment-details h3{margin:28px 0 14px}
+.appointment-hours>div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:12px 0}
+.appointment-hours dt{font-weight:700}
+.appointment-hours dd{text-align:right;color:var(--muted)}
+#appointment-form{scroll-margin-top:120px}
+.page-schedule :is(a,button,input,select,textarea):focus-visible{outline:3px solid #986018;outline-offset:4px}
+.page-schedule .nav [aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
+@media(max-width:800px){.appointment-layout{grid-template-columns:1fr}.appointment-intro{padding-top:30px}}
+@media(max-width:480px){.appointment-fields{grid-template-columns:1fr}.page-schedule .appointment-intro{padding-top:28px}.page-schedule .form-card{border-radius:18px}}
+</style>
 </head>
-<body>
+<body class="page-schedule">
 <div class="top-bar"><div class="container top-bar-inner"><span>197 Jefferson Parkway, Newnan, GA 30263</span><a href="tel:+17706839105">(770) 683-9105</a></div></div>
 <header class="site-header">
   <div class="container nav-wrap">
     <a href="index.html" class="brand"><img src="images/logo-approved.png" alt="Newnan Family Chiropractic logo"></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-    <nav class="nav" id="navMenu">
-      <a href="index.html">Home</a><a href="about.html">Dr. Truong</a><a href="services.html">Services</a><a href="new-patients.html">New Patients</a><a href="schedule.html">Schedule Online</a><a href="contact.html">Contact</a><a href="tel:+17706839105" class="nav-call">Call Now</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false" type="button">☰</button>
+    <nav class="nav" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="about.html">Dr. Truong</a><a href="services.html">Services</a><a href="new-patients.html">New Patients</a><a href="schedule.html" aria-current="page">Request Appointment</a><a href="contact.html">Contact</a><a href="tel:+17706839105" class="nav-call">Call Now</a>
     </nav>
   </div>
 </header>
-<main>
-<section class="hero premium-hero" style="min-height:58vh">
-  <div class="container hero-grid" style="grid-template-columns:1fr;max-width:920px;text-align:center;padding:84px 0">
-    <div class="hero-content">
-      <p class="hero-badge">Online Appointment Request</p>
-      <h1>Schedule your visit.</h1>
-      <p class="hero-text" style="margin-left:auto;margin-right:auto">Request an appointment online or call the office directly. For your privacy, please do not include any personal health information (PHI) when submitting this form. </p>
-      <div class="hero-actions" style="justify-content:center"><a href="tel:+17706839105" class="btn btn-primary">Call (770) 683-9105</a><a href="contact.html" class="btn btn-outline">Contact Office</a></div>
-    </div>
+<main id="main-content">
+<section class="appointment-intro">
+  <div class="container">
+    <p class="eyebrow">Newnan Family Chiropractic</p>
+    <h1>Request an appointment</h1>
+    <p>Choose a preferred day and time below. Our office will contact you to confirm your visit.</p>
+    <a class="appointment-jump" href="#appointment-form">Go to request form ↓</a>
   </div>
 </section>
-<section class="section">
-  <div class="container booking-layout">
-    <div class="booking-info">
-      <p class="eyebrow">Before You Schedule</p>
-      <h2>Fast scheduling, handled carefully.</h2>
-      <p>Use this page for basic appointment requests only. Do not include detailed medical history, diagnosis information, insurance ID numbers, Social Security numbers, or highly sensitive health details in a non-secure message field.</p>
-      <div class="booking-note"><strong>HIPAA-conscious setup note:</strong><p>The embedded scheduler should be connected only after the scheduling vendor account is configured for healthcare privacy needs, including a Business Associate Agreement when required.</p></div>
-      <div class="quick-info" style="margin-top:24px">
-        <div><strong>Phone</strong><span><a href="tel:+17706839105">(770) 683-9105</a></span></div>
-        <div><strong>Address</strong><span>197 Jefferson Parkway, Newnan</span></div>
-        <div><strong>Best for</strong><span>New patients, existing patients, questions</span></div>
-      </div>
+<section class="appointment-section">
+  <div class="container appointment-layout">
+    <div class="form-card" id="appointment-form">
+      <h2>Tell us what works for you.</h2>
+      <p id="request-help">This is an appointment request, not a confirmed booking. For same-day availability, call <a href="tel:+17706839105">(770) 683-9105</a>.</p>
+      <form action="https://formspree.io/f/xojorllz" method="POST" aria-describedby="request-help privacy-help">
+        <div class="appointment-fields">
+          <div class="form-row"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="form-row"><label for="patient">Patient type</label><select id="patient" name="patient_type" required><option value="">Select one</option><option>New patient</option><option>Existing patient</option></select></div>
+          <div class="form-row"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="form-row"><label for="day">Preferred day</label><select id="day" name="preferred_day" required><option value="">Choose a day</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>First available</option></select></div>
+          <div class="form-row"><label for="time">Preferred time</label><select id="time" name="preferred_time" required><option value="">Choose a day first</option></select></div>
+        </div>
+        <div class="form-row"><label for="note">Scheduling note <span>(optional)</span></label><textarea id="note" name="message" maxlength="500" placeholder="For example: Please call after 2 PM, or request a specific date."></textarea></div>
+        <p class="appointment-privacy" id="privacy-help">Please do not submit medical details, insurance IDs, Social Security numbers, or other sensitive health information.</p>
+        <input type="hidden" name="_subject" value="Website Appointment Request - Newnan Family Chiropractic">
+        <input type="hidden" name="request_type" value="Appointment request">
+        <button type="submit" class="btn btn-dark full">Send appointment request</button>
+        <p class="appointment-confirmation">Your appointment is confirmed only after our office contacts you.</p>
+      </form>
     </div>
-    <div class="booking-widget">
-      <p class="eyebrow">Appointment Request</p>
-      <h2>Request a visit online.</h2>
-      <div class="scheduler-placeholder">
-        <img src="images/logo-square.png" alt="Newnan Family Chiropractic mark">
-        <h3>Prefer to speak with the office?</h3>
-        <p>Call during office hours for immediate scheduling assistance. Online requests are reviewed by the office and are not confirmed until a staff member contacts you.</p>
-        <a href="tel:+17706839105" class="btn btn-primary" style="margin-top:16px">Call (770) 683-9105</a>
+    <aside class="appointment-details" aria-label="Office information">
+      <div class="form-card">
+        <p class="eyebrow">Prefer to call?</p>
+        <h2>We’re happy to help.</h2>
+        <a href="tel:+17706839105" class="btn btn-dark full">Call (770) 683-9105</a>
+        <h3>Office hours</h3>
+        <dl class="appointment-hours">
+          <div><dt>Monday</dt><dd>9 AM–12 PM<br>3–6 PM</dd></div>
+          <div><dt>Tuesday</dt><dd>2–5:30 PM</dd></div>
+          <div><dt>Wednesday</dt><dd>9 AM–12 PM<br>3–6 PM</dd></div>
+          <div><dt>Thursday</dt><dd>2–5:30 PM</dd></div>
+          <div><dt>Friday</dt><dd>9 AM–12 PM</dd></div>
+          <div><dt>Saturday & Sunday</dt><dd>Closed</dd></div>
+        </dl>
+        <h3>Visit our office</h3>
+        <p>197 Jefferson Parkway<br>Newnan, GA 30263</p>
+        <a class="appointment-jump" href="https://www.google.com/maps/search/?api=1&query=Newnan%20Family%20Chiropractic%20197%20Jefferson%20Parkway%20Newnan%20GA" target="_blank" rel="noopener">Get directions ↗</a>
+        <a class="appointment-jump" href="new-patients.html">New patient information →</a>
       </div>
-    </div>
-  </div>
-</section>
-<section class="section" style="padding-top:0">
-  <div class="container form-card">
-    <p class="eyebrow">Online Request Form</p>
-    <h2>Request an appointment</h2>
-    <p>Submit basic contact and scheduling information only. The office will contact you to confirm availability.</p>
-    <form action="https://formspree.io/f/xojorllz" method="POST">
-      <div class="form-row"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required></div>
-      <div class="form-row"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Best phone number" required></div>
-      <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="Email address" required></div>
-      <div class="form-row"><label for="patient">Patient type</label><select id="patient" name="patient_type" required><option value="">Select one</option><option>New patient</option><option>Existing patient</option></select></div>
-      <div class="form-row"><label for="time">Preferred day/time</label><input id="time" name="preferred_time" type="text" placeholder="Example: Wednesday afternoon" required></div>
-      <div class="form-row"><label for="note">Brief note, optional</label><textarea id="note" name="message" placeholder="Keep this brief. Do not include sensitive medical details here."></textarea></div>
-      <input type="hidden" name="_subject" value="Website Appointment Request - Newnan Family Chiropractic">
-      <input type="hidden" name="request_type" value="Appointment request">
-      <button type="submit" class="btn btn-dark">Submit Appointment Request</button>
-    </form>
+    </aside>
   </div>
 </section>
 </main>
-<footer class="footer"><div class="container footer-grid"><div><img src="images/logo-approved.png" alt="Newnan Family Chiropractic logo" class="footer-logo"><p>Newnan Family Chiropractic with Dr. Tuan Truong, D.C.</p></div><div><h4>Contact</h4><p>197 Jefferson Parkway<br>Newnan, GA 30263</p><a href="tel:+17706839105">(770) 683-9105</a></div><div><h4>Pages</h4><a href="about.html">Dr. Truong</a><a href="services.html">Services</a><a href="new-patients.html">New Patients</a><a href="schedule.html">Schedule Online</a><a href="contact.html">Contact</a></div><div><h4>Resources</h4><a href="privacy-policy.html">Privacy Policy</a><a href="hipaa-notice.html">HIPAA Notice</a><a href="terms.html">Terms of Use</a><a href="accessibility.html">Accessibility</a><a href="sitemap.html">Sitemap</a></div></div><div class="container footer-bottom"><p>© 2026 Newnan Family Chiropractic. All Rights Reserved.</p></div></footer>
+<footer class="footer"><div class="container footer-grid"><div><img src="images/logo-approved.png" alt="Newnan Family Chiropractic logo" class="footer-logo"><p>Newnan Family Chiropractic with Dr. Tuan Truong, D.C.</p></div><div><h4>Contact</h4><p>197 Jefferson Parkway<br>Newnan, GA 30263</p><a href="tel:+17706839105">(770) 683-9105</a></div><div><h4>Pages</h4><a href="about.html">Dr. Truong</a><a href="services.html">Services</a><a href="new-patients.html">New Patients</a><a href="schedule.html" aria-current="page">Request Appointment</a><a href="contact.html">Contact</a></div><div><h4>Resources</h4><a href="privacy-policy.html">Privacy Policy</a><a href="hipaa-notice.html">HIPAA Notice</a><a href="terms.html">Terms of Use</a><a href="accessibility.html">Accessibility</a><a href="sitemap.html">Sitemap</a></div></div><div class="container footer-bottom"><p>© 2026 Newnan Family Chiropractic. All Rights Reserved.</p></div></footer>
 <div class="mobile-action-bar"><a href="tel:+17706839105">Call</a><a href="https://www.google.com/maps/place/Newnan+Family+Chiropractic/@33.3996812,-84.7699288,15z" target="_blank" rel="noopener">Directions</a><a href="schedule.html">Schedule</a></div>
 <script src="script.js"></script>
+<script>
+(function () {
+  const day = document.getElementById('day');
+  const time = document.getElementById('time');
+  function updateTimes() {
+    const value = day.value;
+    const choices = !value ? [['', 'Choose a day first']] :
+      value === 'First available' ? [['Any available time', 'Any available time']] :
+      ['Tuesday', 'Thursday'].includes(value) ? [['', 'Choose a time'], ['2–5:30 PM', 'Afternoon: 2–5:30 PM']] :
+      value === 'Friday' ? [['', 'Choose a time'], ['9 AM–12 PM', 'Morning: 9 AM–12 PM']] :
+      [['', 'Choose a time'], ['9 AM–12 PM', 'Morning: 9 AM–12 PM'], ['3–6 PM', 'Afternoon: 3–6 PM'], ['Any office hours', 'Either morning or afternoon']];
+    time.replaceChildren(...choices.map(function (choice) { return new Option(choice[1], choice[0]); }));
+  }
+  day.addEventListener('change', updateTimes);
+  updateTimes();
+})();
+</script>
 </body>
 </html>
