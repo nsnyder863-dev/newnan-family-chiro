@@ -44,14 +44,45 @@
   ]
 }
   </script>
+<style>
+.home-office-summary{background:#071d33;color:#fff;padding:18px 0}
+.home-office-grid{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:24px;align-items:center;font-size:15px;line-height:1.5}
+.home-office-summary strong{display:block;color:#e5b55d;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.home-office-address span{display:block}
+.home-office-directions{text-decoration:underline;margin-top:4px;font-size:13px}
+.home-office-hours dl{margin:0}
+.home-office-hours dl>div{display:grid;grid-template-columns:100px 1fr;gap:12px}
+.home-office-hours dd{margin:0}
+.home-office-actions{display:grid;gap:10px}
+.home-office-phone,.home-office-book{display:block;padding:12px 14px;border-radius:10px;text-align:center;font-weight:800}
+.home-office-phone{background:white;color:#071d33}
+.home-office-book{background:#e5b55d;color:#071d33}
+@media(max-width:800px){
+.home-office-grid{grid-template-columns:1fr 1.35fr;gap:14px;font-size:13px}
+.home-office-actions{grid-column:1/-1;grid-template-columns:1fr 1fr;gap:10px}
+.home-office-hours dl>div{grid-template-columns:78px 1fr;gap:6px}
+.home-office-phone,.home-office-book{padding:12px 8px;font-size:13px}
+}
+@media(max-width:360px){
+.home-office-grid{grid-template-columns:1fr;gap:10px}
+.home-office-hours dl>div{grid-template-columns:90px 1fr}
+.home-office-actions{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-<div class="top-bar">
-  <div class="container top-bar-inner">
-    <span>197 Jefferson Parkway, Newnan, GA 30263</span>
-    <a href="tel:+17706839105">(770) 683-9105</a>
+<section class="home-office-summary" aria-label="Address, phone and office hours">
+  <div class="container home-office-grid">
+    <a class="home-office-address" href="https://www.google.com/maps/search/?api=1&query=Newnan%20Family%20Chiropractic%20197%20Jefferson%20Parkway%20Newnan%20GA" target="_blank" rel="noopener"><strong>Visit us</strong><span>197 Jefferson Parkway<br>Newnan, GA 30263</span><span class="home-office-directions">Get directions ↗</span></a>
+    <div class="home-office-hours"><strong>Office hours</strong><dl>
+      <div><dt>Mon & Wed</dt><dd>9 AM–12 PM & 3–6 PM</dd></div>
+      <div><dt>Tue & Thu</dt><dd>2–5:30 PM</dd></div>
+      <div><dt>Friday</dt><dd>9 AM–12 PM</dd></div>
+      <div><dt>Sat & Sun</dt><dd>Closed</dd></div>
+    </dl></div>
+    <div class="home-office-actions"><a href="tel:+17706839105" class="home-office-phone">Call (770) 683-9105</a><a href="schedule.html" class="home-office-book">Request appointment</a></div>
   </div>
-</div>
+</section>
 <header class="site-header">
   <div class="container nav-wrap">
     <a href="index.html" class="brand" aria-label="Newnan Family Chiropractic home">
