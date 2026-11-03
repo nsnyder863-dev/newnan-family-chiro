@@ -161,3 +161,19 @@ picture img{height:auto}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 .footer .footer-title,.site-footer .footer-title{font-family:Inter,system-ui,sans-serif;font-size:1.28rem;line-height:1.2;color:#fff;margin-bottom:14px}
 .page-contact .appointment-card h2{font-family:Inter,system-ui,sans-serif;font-size:1.28rem;line-height:1.25}
+
+/* Compact navigation masthead: retain the original logo artwork while
+   cropping the promotional icons and gold card footer from header display. */
+.site-header{background:#fff;backdrop-filter:none}
+.site-header .nav-wrap{gap:18px;padding:10px 0}
+.site-header .brand{display:block;flex:0 0 auto;width:270px;max-width:calc(100% - 62px);overflow:hidden;aspect-ratio:2.7}
+.site-header .brand picture{width:100%;height:100%;overflow:hidden}
+.site-header .brand img{display:block;width:100%;max-width:none;max-height:none;height:auto;object-fit:initial}
+.site-header .menu-toggle{font-size:26px;line-height:1;width:44px;height:44px;padding:0;flex:0 0 44px}
+@media(max-width:1100px) and (min-width:981px){
+ .site-header .brand{width:220px}
+}
+@media(max-width:640px){
+ .site-header .nav-wrap{padding:8px 0}
+ .site-header .brand{width:230px}
+}
