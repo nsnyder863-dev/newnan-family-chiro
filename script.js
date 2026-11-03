@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
   document.body.classList.toggle('scrolled', window.scrollY > 20);
 });
 
-// Measure intent only. Never read form fields, link text, query strings or patient data.
+// Measure intent only. Never send form fields, link text, query strings or patient data.
 // Existing per-page GA destinations are deliberately preserved pending owner verification.
 (function () {
   function measure(name, kind) {
