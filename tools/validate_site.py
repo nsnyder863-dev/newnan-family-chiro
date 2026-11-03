@@ -62,5 +62,22 @@ urls=[e.text for e in ET.parse(ROOT/'sitemap.xml').findall('.//{*}loc')]
 assert sorted(urls)==sorted(canonicals),'Sitemap must match every indexable canonical exactly'
 assert 'Sitemap: '+ORIGIN+'/sitemap.xml' in (ROOT/'robots.txt').read_text()
 assert not (ROOT/'articles').exists(),'Blank file shadows the articles clean URL'
+
+# Conversion and consistency smoke checks. Keep the approved logo and accessible menu on every public page.
+for name, page in pages.items():
+    if name == 'index2.html':
+        continue
+    headers = [a for a in page.select('header') if a.get('class') == 'site-header']
+    if len(headers) != 1:
+        errors.append(f'{name}: must have a single shared site header')
+    menus = [a for a in page.select('nav') if a.get('id') == 'navMenu' and a.get('class') == 'nav']
+    toggles = [a for a in page.select('button') if a.get('id') == 'menuToggle']
+    if len(menus) != 1 or len(toggles) != 1 or toggles[0].get('aria-controls') != 'navMenu':
+        errors.append(f'{name}: missing accessible shared navigation')
+    if 'logo-approved.webp' not in (ROOT / name).read_text():
+        errors.append(f'{name}: approved logo missing')
+    if 'Our office will confirm availability before your visit.' in (ROOT / name).read_text():
+        errors.append(f'{name}: outdated appointment confirmation copy')
+
 if errors: raise SystemExit('\n'.join(errors))
 print(f'PASS: {len(pages)} HTML pages; {len(urls)} indexable canonical URLs; JSON-LD, local links/assets/fragments, form destinations, labels, image dimensions and sitemap.')
