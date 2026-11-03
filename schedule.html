@@ -83,10 +83,19 @@
 <div class="top-bar"><div class="container top-bar-inner"><span>197 Jefferson Parkway, Newnan, GA 30263</span><a href="tel:+17706839105">(770) 683-9105</a></div></div>
 <header class="site-header">
   <div class="container nav-wrap">
-    <a href="/" class="brand"><picture><source srcset="/images/logo-approved.webp" type="image/webp"><img decoding="async" width="1536" height="804" src="/images/logo-approved.png" alt="Newnan Family Chiropractic logo"></picture></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false" type="button">☰</button>
+    <a href="/" class="brand" aria-label="Newnan Family Chiropractic home">
+      <picture><source srcset="/images/logo-approved.webp" type="image/webp"><img decoding="async" width="1536" height="804" src="/images/logo-approved.png" alt="Newnan Family Chiropractic logo"></picture>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">☰</button>
     <nav class="nav" id="navMenu" aria-label="Main navigation">
-      <a href="/">Home</a><a href="/about">Dr. Truong</a><a href="/services">Services</a><a href="/new-patients">New Patients</a><a href="/schedule" aria-current="page">Request Appointment</a><a href="/contact">Contact</a><a href="tel:+17706839105" class="nav-call">Call Now</a>
+      <a href="/">Home</a>
+      <a href="/about">Dr. Truong</a>
+      <a href="/services">Services</a>
+      <a href="/new-patients">New Patients</a>
+      <a href="/articles">Articles</a>
+      <a href="/schedule" aria-current="page">Visit / Request</a>
+      <a href="/contact">Contact</a>
+      <a href="tel:+17706839105" class="nav-call">Call Now</a>
     </nav>
   </div>
 </header>
@@ -109,7 +118,7 @@
           <div class="form-row"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
           <div class="form-row"><label for="patient">Patient type</label><select id="patient" name="patient_type" required><option value="">Select one</option><option>New patient</option><option>Existing patient</option></select></div>
           <div class="form-row"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
-          <div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="form-row"><label for="email">Email address <span>(optional)</span></label><input id="email" name="email" type="email" autocomplete="email"></div>
           <div class="form-row"><label for="day">Preferred day</label><select id="day" name="preferred_day" required><option value="">Choose a day</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>First available</option></select></div>
           <div class="form-row"><label for="time">Preferred time</label><select id="time" name="preferred_time" required><option value="">Choose a time</option><option>Any office hours</option><option>Morning (Mon/Wed/Fri)</option><option>Afternoon (Mon–Thu)</option></select></div>
         </div>
