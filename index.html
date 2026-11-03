@@ -42,6 +42,33 @@
 .home-office-hours dl>div{grid-template-columns:90px 1fr}
 .home-office-actions{grid-template-columns:1fr}
 }
+
+/* Open homepage masthead; the approved navigation logo remains unchanged. */
+.premium-hero{min-height:0;background:linear-gradient(115deg,#06182c,#12364e)}
+.premium-hero::before{display:none}
+.premium-hero .hero-glow{display:none}
+.premium-hero .hero-grid{grid-template-columns:1fr;gap:36px;padding:72px 0 88px}
+.premium-hero .hero-content{max-width:920px}
+.premium-hero .hero-badge{padding:0;border:0;border-radius:0;background:none;color:#e5b55d;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:24px}
+.premium-hero h1{font-size:clamp(2.7rem,5.4vw,4.7rem);line-height:1.08;max-width:900px}
+.premium-hero .hero-text{max-width:760px;font-size:1.1rem}
+.premium-hero .hero-actions{margin-bottom:0}
+.premium-hero .hero-proof{margin-top:22px}
+.premium-hero .hero-visit{max-width:920px;border-top:1px solid rgba(255,255,255,.22);padding-top:26px}
+.premium-hero .hero-visit h2{font-family:Inter,system-ui,sans-serif;font-size:1.2rem;letter-spacing:0;margin-bottom:8px}
+.premium-hero .hero-visit p{color:rgba(255,255,255,.85);max-width:700px;font-size:1rem}
+.premium-hero .quick-info{display:flex;flex-wrap:wrap;gap:12px 32px;margin:20px 0 0}
+.premium-hero .quick-info div{display:block;padding:0;border:0}
+.premium-hero .quick-info strong{color:#e5b55d;margin-right:8px}
+.premium-hero .quick-info span{color:rgba(255,255,255,.8)}
+.premium-hero + .trust-strip{margin-top:0;padding-top:24px}
+@media(max-width:640px){
+.premium-hero .hero-grid{padding:40px 0 44px;gap:28px}
+.premium-hero .hero-badge{font-size:.7rem;letter-spacing:.08em;line-height:1.6;margin-bottom:18px}
+.premium-hero .hero-text{font-size:1rem}
+.premium-hero .quick-info{gap:12px 24px}
+}
+
 </style>
 
 
@@ -196,15 +223,13 @@
         <p>Trusted by Newnan patients for friendly, practical chiropractic care.</p>
       </div>
     </div>
-    <aside class="hero-card glass-card">
-      <picture><source srcset="/images/logo-hero.webp" type="image/webp"><img decoding="async" width="1536" height="802" src="/images/logo-hero.png" alt="Newnan Family Chiropractic Dr. Tuan Truong D.C. logo" class="hero-logo"></picture>
-      <div class="card-divider"></div>
+    <aside class="hero-visit" aria-label="Visiting our office">
+      <h2>Walk-ins are welcome.</h2>
+      <p>Come by anytime during office hours. You don’t need to wait for an appointment confirmation to visit us.</p>
       <div class="quick-info">
-        <div><strong>Same-day visits</strong><span>When available</span></div>
         <div><strong>Most insurance</strong><span>Call to confirm</span></div>
         <div><strong>VA patients</strong><span>Welcome with authorization</span></div>
       </div>
-      <a href="/schedule" class="btn btn-primary full">Request Appointment</a>
     </aside>
   </div>
 </section>
