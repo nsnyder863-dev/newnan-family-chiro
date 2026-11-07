@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=20261103-inline-header" />
+  <link rel="stylesheet" href="/style.css?v=20261107-refined" />
 <style>
 .page-schedule .appointment-intro{padding:46px 0 26px}
 .page-schedule .appointment-intro h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:16px}
@@ -93,7 +93,7 @@
       <a href="/services">Services</a>
       <a href="/new-patients">New Patients</a>
       <a href="/articles">Articles</a>
-      <a href="/schedule" aria-current="page">Visit / Request</a>
+      <a href="/schedule" aria-current="page">Plan Your Visit</a>
       <a href="/contact">Contact</a>
       <a href="tel:+17706839105" class="nav-call">Call Now</a>
     </nav>
@@ -103,7 +103,7 @@
 <section class="appointment-intro">
   <div class="container">
     <p class="eyebrow">Newnan Family Chiropractic</p>
-    <h1>Walk-ins welcome during all office hours</h1>
+    <h1>Plan your visit.</h1>
     <p>You are welcome to come by anytime we are open. No appointment or confirmation is needed. If you need to be seen, simply stop in during the office hours listed below.</p>
     <a class="appointment-jump" href="#appointment-form">Go to request form ↓</a>
   </div>
@@ -137,11 +137,11 @@
         <a href="tel:+17706839105" class="btn btn-dark full">Call (770) 683-9105</a>
         <h3>Office hours</h3>
         <dl class="appointment-hours">
-          <div><dt>Monday</dt><dd>9 AM–12 PM<br>3–6 PM</dd></div>
-          <div><dt>Tuesday</dt><dd>2–5:30 PM</dd></div>
-          <div><dt>Wednesday</dt><dd>9 AM–12 PM<br>3–6 PM</dd></div>
-          <div><dt>Thursday</dt><dd>2–5:30 PM</dd></div>
-          <div><dt>Friday</dt><dd>9 AM–12 PM</dd></div>
+          <div><dt>Monday</dt><dd>9:00 AM–12:00 PM<br>3:00 PM–6:00 PM</dd></div>
+          <div><dt>Tuesday</dt><dd>2:00 PM–5:30 PM</dd></div>
+          <div><dt>Wednesday</dt><dd>9:00 AM–12:00 PM<br>3:00 PM–6:00 PM</dd></div>
+          <div><dt>Thursday</dt><dd>2:00 PM–5:30 PM</dd></div>
+          <div><dt>Friday</dt><dd>9:00 AM–12:00 PM</dd></div>
           <div><dt>Saturday & Sunday</dt><dd>Closed</dd></div>
         </dl>
         <h3>Visit our office</h3>
@@ -153,7 +153,15 @@
   </div>
 </section>
 </main>
-<footer class="footer"><div class="container footer-grid"><div><picture><source srcset="/images/logo-approved.webp" type="image/webp"><img loading="lazy" decoding="async" width="1536" height="804" src="/images/logo-approved.png" alt="Newnan Family Chiropractic logo" class="footer-logo"></picture><p>Newnan Family Chiropractic with Dr. Tuan Truong, D.C.</p></div><div><h2 class="footer-title">Contact</h2><p>197 Jefferson Parkway<br>Newnan, GA 30263</p><a href="tel:+17706839105">(770) 683-9105</a></div><div><h2 class="footer-title">Pages</h2><a href="/about">Dr. Truong</a><a href="/services">Services</a><a href="/new-patients">New Patients</a><a href="/schedule" aria-current="page">Request Appointment</a><a href="/contact">Contact</a></div><div><h2 class="footer-title">Resources</h2><a href="/privacy-policy">Privacy Policy</a><a href="/hipaa-notice">HIPAA Notice</a><a href="/terms">Terms of Use</a><a href="/accessibility">Accessibility</a><a href="/sitemap">Sitemap</a></div></div><div class="container footer-bottom"><p>© 2026 Newnan Family Chiropractic. All Rights Reserved.</p></div></footer>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><picture><source srcset="/images/logo-approved.webp" type="image/webp"><img loading="lazy" decoding="async" width="1536" height="804" src="/images/logo-approved.png" alt="Newnan Family Chiropractic logo" class="footer-logo"></picture><p>Newnan Family Chiropractic with Dr. Tuan Truong, D.C.</p></div>
+    <div><h2 class="footer-title">Contact</h2><p>197 Jefferson Parkway<br>Newnan, GA 30263</p><a href="tel:+17706839105">(770) 683-9105</a></div>
+    <div><h2 class="footer-title">Pages</h2><a href="/about">Dr. Truong</a><a href="/services">Services</a><a href="/new-patients">New Patients</a><a href="/schedule">Request Appointment</a><a href="/contact">Contact</a></div>
+    <div><h2 class="footer-title">Resources</h2><a href="/privacy-policy">Privacy Policy</a><a href="/hipaa-notice">HIPAA Notice</a><a href="/terms">Terms of Use</a><a href="/accessibility">Accessibility</a><a href="/sitemap">Sitemap</a></div>
+  </div>
+  <div class="container footer-bottom"><p>© 2026 Newnan Family Chiropractic. All Rights Reserved.</p></div>
+</footer>
 <div class="mobile-action-bar"><a href="tel:+17706839105">Call</a><a href="https://www.google.com/maps/place/Newnan+Family+Chiropractic/@33.3996812,-84.7699288,15z" target="_blank" rel="noopener">Directions</a><a href="/schedule">Schedule</a></div>
 <script src="/script.js?v=20261102-seo2"></script>
 <script>
@@ -164,9 +172,9 @@
     const value = day.value;
     const choices = !value ? [['', 'Choose a day first']] :
       value === 'First available' ? [['Any available time', 'Any available time']] :
-      ['Tuesday', 'Thursday'].includes(value) ? [['', 'Choose a time'], ['2–5:30 PM', 'Afternoon: 2–5:30 PM']] :
-      value === 'Friday' ? [['', 'Choose a time'], ['9 AM–12 PM', 'Morning: 9 AM–12 PM']] :
-      [['', 'Choose a time'], ['9 AM–12 PM', 'Morning: 9 AM–12 PM'], ['3–6 PM', 'Afternoon: 3–6 PM'], ['Any office hours', 'Either morning or afternoon']];
+      ['Tuesday', 'Thursday'].includes(value) ? [['', 'Choose a time'], ['2:00 PM–5:30 PM', 'Afternoon: 2:00 PM–5:30 PM']] :
+      value === 'Friday' ? [['', 'Choose a time'], ['9:00 AM–12:00 PM', 'Morning: 9:00 AM–12:00 PM']] :
+      [['', 'Choose a time'], ['9:00 AM–12:00 PM', 'Morning: 9:00 AM–12:00 PM'], ['3:00 PM–6:00 PM', 'Afternoon: 3:00 PM–6:00 PM'], ['Any office hours', 'Either morning or afternoon']];
     time.replaceChildren(...choices.map(function (choice) { return new Option(choice[1], choice[0]); }));
   }
   day.addEventListener('change', updateTimes);
