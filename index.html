@@ -16,33 +16,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=20261107-refined" />
+  <link rel="stylesheet" href="/style.css?v=20261110-layout" />
 
 <style>
-.home-office-summary{background:#202522;color:#fff;padding:18px 0}
-.home-office-grid{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:24px;align-items:center;font-size:15px;line-height:1.5}
-.home-office-summary strong{display:block;color:#ddc58f;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
-.home-office-address span{display:block}
-.home-office-directions{text-decoration:underline;margin-top:4px;font-size:13px}
-.home-office-hours dl{margin:0}
-.home-office-hours dl>div{display:grid;grid-template-columns:100px 1fr;gap:12px}
-.home-office-hours dd{margin:0}
-.home-office-actions{display:grid;gap:10px}
-.home-office-phone,.home-office-book{display:block;padding:12px 14px;border-radius:10px;text-align:center;font-weight:800}
-.home-office-phone{background:white;color:#202522}
-.home-office-book{background:#ddc58f;color:#202522}
-@media(max-width:800px){
-.home-office-grid{grid-template-columns:1fr 1.35fr;gap:14px;font-size:13px}
-.home-office-actions{grid-column:1/-1;grid-template-columns:1fr 1fr;gap:10px}
-.home-office-hours dl>div{grid-template-columns:78px 1fr;gap:6px}
-.home-office-phone,.home-office-book{padding:12px 8px;font-size:13px}
+.home-office-summary { background:#f6f5f0; color:#303833; padding:16px 0; border-bottom:1px solid #deded5; }
+.home-office-grid { display:grid; grid-template-columns:1fr auto 1.5fr; gap:24px; align-items:center; font-size:14px; line-height:1.5; }
+.home-office-address span { display:block; }
+.home-office-directions { text-decoration:underline; font-size:13px; }
+.home-office-contact { font-weight:600; }
+.home-office-hours strong { font-size:13px; }
+.home-office-hours dl { margin:4px 0 0; }
+.home-office-hours dl>div { display:grid; grid-template-columns:90px 1fr; gap:8px; }
+.home-office-hours dd { margin:0; }
+.hero-walkins { color:#ddc58f; font-weight:600; margin:18px 0 0; }
+.hero-portrait { margin:0; width:100%; max-width:340px; justify-self:center; }
+.hero-portrait img { display:block; width:100%; height:auto; border-radius:12px; }
+.hero-portrait figcaption { padding-top:14px; font-size:16px; }
+.hero-portrait figcaption span { display:block; color:#d8dfd9; font-size:13px; }
+.premium-hero .hero-grid { gap:48px; padding:48px 0; }
+@media(max-width:980px) {
+ .home-office-grid { grid-template-columns:1fr 1.5fr; gap:4px 18px; }
+ .home-office-hours { grid-column:2; grid-row:1 / 3; }
+ .home-office-contact { grid-column:1; }
+ .premium-hero .hero-grid { gap:28px; padding:32px 0; }
+ .hero-portrait { max-width:260px; }
 }
-@media(max-width:360px){
-.home-office-grid{grid-template-columns:1fr;gap:10px}
-.home-office-hours dl>div{grid-template-columns:90px 1fr}
-.home-office-actions{grid-template-columns:1fr}
+@media(max-width:480px) {
+ .home-office-grid { font-size:12px; grid-template-columns:1fr 1.4fr; gap:4px 12px; }
+ .home-office-hours dl>div { grid-template-columns:64px 1fr; gap:5px; }
+ .home-office-hours dd { font-size:12px; }
+ .premium-hero h1 { font-size:clamp(1.9rem,8vw,2.65rem); }
+ .hero-actions .btn { padding:13px 17px; }
 }
-
 </style>
 
 
@@ -150,18 +155,6 @@
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<section class="home-office-summary" aria-label="Address, phone and office hours">
-  <div class="container home-office-grid">
-    <a class="home-office-address" href="https://www.google.com/maps/search/?api=1&query=Newnan%20Family%20Chiropractic%20197%20Jefferson%20Parkway%20Newnan%20GA" target="_blank" rel="noopener"><strong>Newnan Family Chiropractic</strong><span>197 Jefferson Parkway<br>Newnan, GA 30263</span><span class="home-office-directions">Get directions ↗</span></a>
-    <div class="home-office-hours"><strong>Office hours</strong><dl>
-      <div><dt>Mon & Wed</dt><dd>9:00 AM–12:00 PM & 3:00 PM–6:00 PM</dd></div>
-      <div><dt>Tue & Thu</dt><dd>2:00 PM–5:30 PM</dd></div>
-      <div><dt>Friday</dt><dd>9:00 AM–12:00 PM</dd></div>
-      <div><dt>Sat & Sun</dt><dd>Closed</dd></div>
-    </dl></div>
-    <div class="home-office-actions"><a href="tel:+17706839105" class="home-office-phone">Call (770) 683-9105</a><a href="/schedule" class="home-office-book">Request appointment</a></div>
-  </div>
-</section>
 <header class="site-header">
   <div class="container nav-wrap">
     <a href="/" class="brand" aria-label="Newnan Family Chiropractic home">
@@ -174,37 +167,47 @@
       <a href="/services">Services</a>
       <a href="/new-patients">New Patients</a>
       <a href="/articles">Articles</a>
-      <a href="/schedule">Plan Your Visit</a>
+      <a href="/schedule">Request an Appointment</a>
       <a href="/contact">Contact</a>
       <a href="tel:+17706839105" class="nav-call">Call Now</a>
     </nav>
   </div>
 </header>
 <main id="main-content">
+<section class="home-office-summary" aria-label="Address, phone and office hours">
+  <div class="container home-office-grid">
+    <a class="home-office-address" href="https://www.google.com/maps/search/?api=1&query=Newnan%20Family%20Chiropractic%20197%20Jefferson%20Parkway%20Newnan%20GA" target="_blank" rel="noopener"><span>197 Jefferson Parkway<br>Newnan, GA 30263</span><span class="home-office-directions">Get directions ↗</span></a>
+    <a class="home-office-contact" href="tel:+17706839105">(770) 683-9105</a>
+    <div class="home-office-hours"><strong>Office hours</strong><dl>
+      <div><dt>Mon & Wed</dt><dd>9:00 AM–12:00 PM & 3:00 PM–6:00 PM</dd></div>
+      <div><dt>Tue & Thu</dt><dd>2:00 PM–5:30 PM</dd></div>
+      <div><dt>Friday</dt><dd>9:00 AM–12:00 PM</dd></div>
+      <div><dt>Sat & Sun</dt><dd>Closed</dd></div>
+    </dl></div>
+    
+  </div>
+</section>
 <section class="hero premium-hero">
   <div class="hero-glow hero-glow-one"></div>
   <div class="hero-glow hero-glow-two"></div>
   <div class="container hero-grid">
     <div class="hero-content">
       <p class="eyebrow">NEWNAN FAMILY CHIROPRACTIC · ESTABLISHED LOCAL CARE</p>
-      <h1>Personal care.<br>Better movement.</h1>
+      <h1>Chiropractic care<br>in Newnan, GA.</h1>
+      <p class="hero-walkins">Walk-ins welcome during office hours.</p>
       <p class="hero-text">Chiropractic care in Newnan with Dr. Tuan Truong, D.C. for back pain, neck pain, sciatica, headaches, and mobility concerns. Serving Newnan and Coweta County for more than 25 years.</p>
       <div class="hero-actions">
-        <a href="/contact" class="btn btn-primary">Hours &amp; Directions</a>
-        <a href="tel:+17706839105" class="btn btn-outline">Call (770) 683-9105</a>
+        <a href="tel:+17706839105" class="btn btn-primary">Call the Office</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Newnan%20Family%20Chiropractic%20197%20Jefferson%20Parkway%20Newnan%20GA" class="btn btn-outline">Get Directions</a>
       </div>
       <div class="hero-proof">
         <p><a href="#patient-reviews">Read patient reviews on Google</a></p>
       </div>
     </div>
-    <aside class="hero-visit" aria-label="Visiting our office"><p class="eyebrow">YOUR NEIGHBORHOOD CHIROPRACTOR</p>
-      <h2>Walk-ins are welcome.</h2>
-      <p>Come by anytime during office hours. You don’t need to wait for an appointment confirmation to visit us.</p>
-      <div class="quick-info">
-        <div><strong>Most insurance</strong><span>Call to confirm</span></div>
-        <div><strong>VA patients</strong><span>Welcome with authorization</span></div>
-      </div>
-    </aside>
+    <figure class="hero-portrait">
+      <picture><source srcset="/images/dr-tuan-truong-home.webp" type="image/webp"><img src="/images/dr-tuan-truong-home.jpg" width="960" height="1200" alt="Dr. Tuan Truong, chiropractor at Newnan Family Chiropractic" fetchpriority="high" decoding="async"></picture>
+      <figcaption>Dr. Tuan Truong, D.C. <span>Serving Newnan for more than 25 years</span></figcaption>
+    </figure>
   </div>
 </section>
 <section class="trust-strip">
@@ -354,7 +357,7 @@
   <div class="container footer-grid">
     <div><picture><source srcset="/images/logo-approved.webp" type="image/webp"><img loading="lazy" decoding="async" width="1536" height="804" src="/images/logo-approved.png" alt="Newnan Family Chiropractic logo" class="footer-logo"></picture><p>Newnan Family Chiropractic with Dr. Tuan Truong, D.C.</p></div>
     <div><h2 class="footer-title">Contact</h2><p>197 Jefferson Parkway<br>Newnan, GA 30263</p><a href="tel:+17706839105">(770) 683-9105</a></div>
-    <div><h2 class="footer-title">Pages</h2><a href="/about">Dr. Truong</a><a href="/services">Services</a><a href="/new-patients">New Patients</a><a href="/schedule">Request Appointment</a><a href="/contact">Contact</a></div>
+    <div><h2 class="footer-title">Pages</h2><a href="/about">Dr. Truong</a><a href="/services">Services</a><a href="/new-patients">New Patients</a><a href="/schedule">Request an Appointment</a><a href="/contact">Contact</a></div>
     <div><h2 class="footer-title">Resources</h2><a href="/privacy-policy">Privacy Policy</a><a href="/hipaa-notice">HIPAA Notice</a><a href="/terms">Terms of Use</a><a href="/accessibility">Accessibility</a><a href="/sitemap">Sitemap</a></div>
   </div>
   <div class="container footer-bottom"><p>© 2026 Newnan Family Chiropractic. All Rights Reserved.</p></div>
