@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="/style.css?v=20261110-layout" />
 
 <style>
+.november-offer-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.november-offer-actions .btn { max-width:100%; min-height:44px; text-align:center; }
+.november-offer-walk-ins { margin:10px 0 0; font-size:.9rem; font-weight:700; }
 .home-office-summary { background:#f6f5f0; color:#303833; padding:16px 0; border-bottom:1px solid #deded5; }
 .home-office-grid { display:grid; grid-template-columns:1fr auto 1.5fr; gap:24px; align-items:center; font-size:14px; line-height:1.5; }
 .home-office-address span { display:block; }
@@ -179,8 +182,12 @@
     <p class="eyebrow">November new-patient special</p>
     <h2 id="november-offer-title" style="font-size:clamp(1.6rem,4vw,2.2rem);color:#202522;margin:8px 0 12px;">Your first visit for $40.</h2>
     <p>Includes a consultation, examination, and first adjustment when clinically appropriate.</p>
-    <p style="font-size:.9rem;margin:10px 0 16px;">For new patients visiting through November 30, 2026. Walk-ins welcome during office hours. Call to confirm offer eligibility and insurance requirements. Additional services, if recommended, are priced separately.</p>
-    <a class="btn btn-dark" href="/schedule#appointment-form">Request an Appointment</a>
+    <p style="font-size:.9rem;margin:10px 0 16px;">For new patients visiting through November 30, 2026. Call to confirm offer eligibility and insurance requirements. Additional services, if recommended, are priced separately.</p>
+    <div class="november-offer-actions">
+      <a class="btn btn-dark" href="/schedule#appointment-form">Request an Appointment</a>
+      <a class="btn btn-dark" href="tel:+17706839105">Call the Office</a>
+    </div>
+    <p class="november-offer-walk-ins">Walk-ins welcome during office hours.</p>
   </div>
 </section>
 
