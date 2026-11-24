@@ -226,3 +226,115 @@ h1{font-size:clamp(2.5rem,4.7vw,4.7rem)}h2{font-size:clamp(1.9rem,3.1vw,3rem)}h3
 .readable h2{font-size:1.65rem;margin-top:36px}.readable{line-height:1.85}.footer{background:#202522}.footer .footer-title{font-size:1rem;font-weight:600}.footer p,.footer a{font-size:.88rem}.footer .footer-logo{max-width:210px;border-radius:4px}
 @media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:35px;padding:56px 0}.hero-visit{padding:25px 0 0;border-left:0;border-top:1px solid #657368;max-width:600px}.hero-visit h2{font-size:1.5rem}.hero-visit .quick-info{display:flex;gap:24px;flex-wrap:wrap}.hero-visit .quick-info div{flex:1 1 180px}.hero h1{max-width:700px}}
 @media(max-width:640px){h1{font-size:2.65rem}h2{font-size:2rem}.hero-grid{padding:42px 0;gap:30px}.hero-text{font-size:1rem;margin-top:18px}.hero-actions{gap:12px;margin-bottom:18px}.hero-visit{padding-top:24px}.trust-grid{grid-template-columns:1fr 1fr}.trust-grid>div{padding:20px 10px;border-bottom:1px solid var(--line)}.section{padding:58px 0}.page-hero{padding:42px 0}.page-hero h1{font-size:2.35rem}.article-grid{grid-template-columns:1fr}.home-office-hours dd{font-size:.83rem}.schedule-panel{padding:30px 22px}.contact-card{padding:26px}.footer-grid{gap:30px}.footer{padding-top:48px}.mobile-action-bar a:nth-child(3){background:#202522}.hero .eyebrow{font-size:.62rem}}
+
+/* Practice identity and shared editorial layouts */
+:root {
+  --navy: #242321;
+  --navy-2: #302e2b;
+  --navy-3: #3f3b36;
+  --ivory: #f7f5f0;
+  --cream: #fffdf9;
+  --text: #2d2b29;
+  --muted: #56534f;
+  --copper: #785b32;
+  --gold: #dfc69a;
+  --line: #dcd6cc;
+  --display: Georgia, "Times New Roman", serif;
+}
+h1, h2, .page-hero h1, .article-card h2,
+.condition-card h3, .feature-card h3, .steps-grid h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: -.038em;
+  line-height: 1.1;
+}
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .nav-wrap { max-width: 1320px; }
+.site-header .brand { max-width: 310px; }
+.nav a[aria-current="page"] { text-decoration-thickness: 2px; }
+.btn, .nav-call { border-radius: 4px; }
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-outline { background: transparent; border-color: #a7a097; }
+.hero.premium-hero, .hero:not(.premium-hero), .page-hero {
+  background: linear-gradient(110deg, #232220 20%, #34312d);
+  border-bottom: 3px solid var(--gold);
+}
+.hero .hero-badge, .hero .eyebrow, .page-hero .eyebrow {
+  display: block; width: fit-content; padding: 0; margin: 0 0 1.25rem;
+  background: transparent; border: 0; border-radius: 0;
+  color: var(--gold); font-size: .875rem; font-weight: 600;
+  line-height: 1.4; letter-spacing: .12em; text-transform: uppercase;
+}
+.hero h1, .page-hero h1 {
+  max-width: 20ch; font-size: clamp(2.65rem, 5.5vw, 5rem);
+}
+.hero-text, .page-hero p { max-width: 62ch; }
+.hero:not(.premium-hero) > .container, .page-hero {
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+}
+.hero:not(.premium-hero) .hero-actions { margin-bottom: 0; }
+.premium-hero .hero-content .hero-text { margin-block: 1rem 1.5rem; }
+.premium-hero .hero-actions { margin-bottom: 1rem; }
+.hero-proof a { text-decoration: underline; text-underline-offset: .25em; }
+.premium-hero .hero-portrait { max-width: 310px; }
+.premium-hero .hero-portrait img { border-radius: 2px; }
+.premium-hero .hero-portrait figcaption {
+  margin-top: .85rem; padding-top: .75rem; border-top: 1px solid #8c7c63;
+  font: 1.3rem/1.3 var(--display); color: white;
+}
+.premium-hero .hero-portrait figcaption span {
+  font: .875rem/1.6 Inter, system-ui, sans-serif; color: #e4dfd7;
+}
+.section-heading { text-align: left; max-width: 780px; margin-inline: 0; }
+.section-heading.compact { margin-inline: 0; }
+.condition-grid, .article-grid, .feature-grid, .steps-grid {
+  column-gap: clamp(1rem, 3vw, 3rem); row-gap: 1.5rem;
+}
+.condition-card, .article-card, .feature-card, .steps-grid article {
+  border: 0; border-top: 1px solid #a48d6d; border-radius: 0;
+  background: transparent; padding: 1.45rem .25rem 1rem; box-shadow: none;
+}
+.condition-card h3, .feature-card h3, .steps-grid h3, .article-card h2 {
+  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
+}
+.condition-card:hover, .article-card:hover { box-shadow: none; transform: none; }
+.condition-card:is(:hover,:focus-visible) h3, .article-card a:hover {
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em;
+}
+.eyebrow, .article-card .kicker { font-size: .875rem; letter-spacing: .12em; }
+.trust-strip { background: #efebe3; }
+.trust-grid strong { font: 1.5rem/1.25 var(--display); }
+.readable { max-width: 72ch; }
+.readable p { font-size: 1.0625rem; }
+.readable h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); }
+.faq-list details { border-radius: 3px; }
+.schedule-panel, .contact-card, .form-card, .page-contact .premium-panel {
+  border-radius: 4px; box-shadow: none;
+}
+.page-contact .contact-form :is(input,textarea), .form-row :is(input,select,textarea) {
+  border-radius: 4px; border-color: #918a80;
+}
+.page-contact .contact-form label, .form-row label { font-weight: 600; }
+.footer, .site-footer { background: #242321; border-top: 3px solid var(--gold); }
+.footer a:hover, .site-footer a:hover { text-decoration: underline; }
+.home-office-summary .home-office-contact {
+  color: var(--navy); font: 1.35rem/1.3 var(--display);
+}
+.november-offer { background: #efe8da; padding: clamp(2rem, 4vw, 3.25rem) 0; }
+.november-offer .container { border-left: 2px solid #967951; padding-left: clamp(1rem, 3vw, 2rem); }
+.november-offer h2 { font-size: clamp(1.8rem, 3.5vw, 2.75rem); margin-bottom: .65rem; }
+.november-offer .eyebrow { margin-bottom: .6rem; }
+.november-offer p { max-width: 80ch; }
+@media (min-width: 981px) {
+  .premium-hero .container.hero-grid { grid-template-columns: 1.35fr .75fr; padding-block: clamp(3rem, 5vw, 5rem); }
+}
+@media (max-width: 640px) {
+  .site-header .brand { max-width: min(250px, calc(100% - 54px)); }
+  .premium-hero .hero-portrait { max-width: 240px; justify-self: start; }
+  .hero .eyebrow { font-size: .875rem; }
+  .condition-grid, .article-grid, .feature-grid, .steps-grid { row-gap: .65rem; }
+  .home-office-summary .home-office-grid { grid-template-columns: 1fr; gap: .5rem; font-size: .9rem; }
+  .home-office-summary .home-office-hours { grid-area: auto; }
+  .home-office-summary .home-office-hours dl > div { grid-template-columns: 6rem 1fr; }
+  .home-office-summary .home-office-hours dd { font-size: .875rem; }
+}
